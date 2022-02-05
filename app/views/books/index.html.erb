@@ -1,5 +1,5 @@
 <div class = "main">
-<p><%= flash[:destroy] %></p>
+<p class = "flash"><%= flash[:destroy] %></p>
 <h1>Books</h1>
 
 <table class = "table">
@@ -34,7 +34,9 @@
 <% if @book.errors.any? %>
 <%= @book.errors.count %>errors prohibited this book from being saved:
 <% @book.errors.full_messages.each do |message| %>
+<ul>
 <li><%= message %></li>
+</ul>
 <% end %>
 <% end %>
 </div>
